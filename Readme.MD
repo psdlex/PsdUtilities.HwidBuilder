@@ -61,3 +61,17 @@ var result = HwidBuilder.Create()
     .AddCustomIdentifier<MyCustomIdentifier>(manager => new MyCustomIdentifier(manager)) // manager is being provided through the delegate object
     .Build();
 ```
+
+## How to hash
+#### Use library's interface to create your own hasher, or use the default one, which is based on `BCrypt-Next`
+```csharp
+var defaultHasher = new DefaultHwidHasher();
+var hash = defaultHasher.ComputeHash(hwid);
+var hashString = DefaultHwidHasher.DefaultEncoding.GetString(hash);
+var isEqual = defaultHasher.VerifyHash(hwid, hash);
+
+Console.WriteLine($"""
+    Hash: {hashString}
+    Is Equal: {isEqual}
+    """);
+```
