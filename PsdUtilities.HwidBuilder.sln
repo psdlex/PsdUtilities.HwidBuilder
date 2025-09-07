@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsdUtilities.HwidBuilder", "PsdUtilities.HwidBuilder\PsdUtilities.HwidBuilder.csproj", "{4EB1438C-8D98-4BC7-8D8C-5AB076958FAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsdUtilities.HwidBuilder.Run", "PsdUtilities.HwidBuilder.Run\PsdUtilities.HwidBuilder.Run.csproj", "{BFFCDC82-8D12-4B20-8257-41F9095BCD4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EB1438C-8D98-4BC7-8D8C-5AB076958FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB1438C-8D98-4BC7-8D8C-5AB076958FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB1438C-8D98-4BC7-8D8C-5AB076958FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB1438C-8D98-4BC7-8D8C-5AB076958FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFFCDC82-8D12-4B20-8257-41F9095BCD4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFFCDC82-8D12-4B20-8257-41F9095BCD4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFFCDC82-8D12-4B20-8257-41F9095BCD4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFFCDC82-8D12-4B20-8257-41F9095BCD4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EFDEB7C-4B73-44E2-A7C2-BE5464FA7400}
+	EndGlobalSection
+EndGlobal

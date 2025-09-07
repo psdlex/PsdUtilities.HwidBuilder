@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>PsdUtilities.HwidBuilder</Title>
+		<Description>Simple utility library for obtaining and hashing
+HWID's of the Windows' system via WMIC</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+	  <PackageReference Include="System.Management" Version="9.0.8" />
+	</ItemGroup>
+
+</Project>
