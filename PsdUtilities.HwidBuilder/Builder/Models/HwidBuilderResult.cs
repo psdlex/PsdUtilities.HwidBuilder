@@ -2,20 +2,19 @@ using System;
 using System.Collections.Generic;
 
 using PsdUtilities.HwidBuilder.Hashers;
-using PsdUtilities.HwidBuilder.Wmi.Identifiers.Common;
 
 namespace PsdUtilities.HwidBuilder.Builder.Models;
 
 public sealed class HwidBuilderResult : IHwidBuilderResult
 {
-    private readonly Dictionary<HwidComponentIdentifiers, string> _hwids;
+    private readonly Dictionary<string, string> _hwids;
 
-    private HwidBuilderResult(Dictionary<HwidComponentIdentifiers, string> hwids)
+    private HwidBuilderResult(Dictionary<string, string> hwids)
     {
         _hwids = hwids;
     }
 
-    public IReadOnlyDictionary<HwidComponentIdentifiers, string> Hwids => _hwids;
+    public IReadOnlyDictionary<string, string> Hwids => _hwids;
 
     public byte[] DefaultHash()
         => Hash<DefaultHwidHasher>();
@@ -28,9 +27,9 @@ public sealed class HwidBuilderResult : IHwidBuilderResult
         return hasher.ComputeHash(this);
     }
 
-    internal static HwidBuilderResult Create(Action<Dictionary<HwidComponentIdentifiers, string>> configure)
+    internal static HwidBuilderResult Create(Action<Dictionary<string, string>> configure)
     {
-        var hwids = new Dictionary<HwidComponentIdentifiers, string>();
+        var hwids = new Dictionary<string, string>();
         configure(hwids);
 
         return new HwidBuilderResult(hwids);

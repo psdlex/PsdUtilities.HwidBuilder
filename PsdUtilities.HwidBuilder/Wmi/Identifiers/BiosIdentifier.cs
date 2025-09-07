@@ -15,7 +15,7 @@ public sealed class BiosIdentifier : IHwidIdentifier
         _wmiManager = wmiManager;
     }
 
-    public HwidComponentIdentifiers Component => HwidComponentIdentifiers.Bios;
+    public string ComponentName => HwidComponentIdentifiers.Bios;
 
     public string?[] GetIds()
     {

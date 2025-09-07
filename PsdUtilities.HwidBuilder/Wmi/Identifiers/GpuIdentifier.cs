@@ -17,7 +17,7 @@ public sealed class GpuIdentifier : IHwidIdentifier
         _wmiManager = wmiManager;
     }
 
-    public HwidComponentIdentifiers Component => HwidComponentIdentifiers.Gpu;
+    public string ComponentName => HwidComponentIdentifiers.Gpu;
 
     public string?[] GetIds()
     {

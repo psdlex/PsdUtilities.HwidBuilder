@@ -24,7 +24,7 @@ partial class HwidBuilder
                     .Where(predicate)
                     .Join(_hwidBuilderOptions.Seperator);
 
-                dic.Add(identifier.Component, joined);
+                dic.Add(identifier.ComponentName, joined);
             }
         });
 

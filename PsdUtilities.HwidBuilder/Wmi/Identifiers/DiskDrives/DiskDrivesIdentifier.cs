@@ -21,7 +21,7 @@ public sealed class DiskDrivesIdentifier : IHwidIdentifier
         _ignoredTypes = ignoredTypes;
     }
 
-    public HwidComponentIdentifiers Component => HwidComponentIdentifiers.DiskDrives;
+    public string ComponentName => HwidComponentIdentifiers.DiskDrives;
 
     public string?[] GetIds()
     {

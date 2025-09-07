@@ -15,7 +15,7 @@ public sealed class MotherboardIdentifier : IHwidIdentifier
         _wmiManager = wmiManager;
     }
 
-    public HwidComponentIdentifiers Component => HwidComponentIdentifiers.Motherboard;
+    public string ComponentName => HwidComponentIdentifiers.Motherboard;
 
     public string?[] GetIds()
     {

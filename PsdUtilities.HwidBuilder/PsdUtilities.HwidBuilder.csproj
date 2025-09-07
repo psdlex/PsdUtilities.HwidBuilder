@@ -7,8 +7,21 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>PsdUtilities.HwidBuilder</Title>
 		<Description>Simple utility library for obtaining and hashing
-HWID's of the Windows' system via WMIC</Description>
+HWIDs of the Windows' system via WMIC</Description>
+		<PackageProjectUrl>https://github.com/psdlex/PsdUtilities.HwidBuilder</PackageProjectUrl>
+		<PackageReadmeFile>Readme.MD</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/psdlex/PsdUtilities.HwidBuilder</RepositoryUrl>
+		<PackageTags>hwid;wmic;windows;hardware</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\Readme.MD">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />

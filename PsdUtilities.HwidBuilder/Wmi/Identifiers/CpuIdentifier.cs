@@ -17,7 +17,7 @@ public sealed class CpuIdentifier : IHwidIdentifier
         _wmiManager = wmiManager;
     }
 
-    public HwidComponentIdentifiers Component => HwidComponentIdentifiers.Cpu;
+    public string ComponentName => HwidComponentIdentifiers.Cpu;
 
     public string?[] GetIds()
     {

@@ -15,7 +15,7 @@ public sealed class MacIdentifier : IHwidIdentifier
     {
         _nicFilter = nicFilter;
     }
-    public HwidComponentIdentifiers Component => HwidComponentIdentifiers.Mac;
+    public string ComponentName => HwidComponentIdentifiers.Mac;
 
     public string?[] GetIds()
     {

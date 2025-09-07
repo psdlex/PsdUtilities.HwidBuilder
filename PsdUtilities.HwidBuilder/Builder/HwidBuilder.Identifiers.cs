@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 
@@ -5,6 +6,7 @@ using PsdUtilities.HwidBuilder.Wmi.Identifiers;
 using PsdUtilities.HwidBuilder.Wmi.Identifiers.Common;
 using PsdUtilities.HwidBuilder.Wmi.Identifiers.DiskDrives;
 using PsdUtilities.HwidBuilder.Wmi.Identifiers.Ram;
+using PsdUtilities.HwidBuilder.Wmi.Manager;
 
 namespace PsdUtilities.HwidBuilder.Builder;
 
@@ -67,6 +69,13 @@ partial class HwidBuilder
         where TIdentifier : IHwidIdentifier, new()
     {
         var identifier = new TIdentifier();
+        return AddCustomIdentifier(identifier);
+    }
+
+    public HwidBuilder AddCustomIdentifier<TIdentifier>(Func<IWmiManager, TIdentifier> factory)
+        where TIdentifier : IHwidIdentifier
+    {
+        var identifier = factory(_wmiManager);
         return AddCustomIdentifier(identifier);
     }
 }

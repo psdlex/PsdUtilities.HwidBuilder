@@ -21,7 +21,7 @@ public sealed class RamIdentifier : IHwidIdentifier
         _ramIdentifierPropertyType = ramIdentifierPropertyType;
     }
 
-    public HwidComponentIdentifiers Component => HwidComponentIdentifiers.Ram;
+    public string ComponentName => HwidComponentIdentifiers.Ram;
 
     public string?[] GetIds()
     {
